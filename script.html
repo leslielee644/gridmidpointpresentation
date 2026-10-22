@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grid — Midpoint pitch · Presentation script</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b1526;--muted:#475467;--faint:#5b6577;--line:#e4e7ee;--blue:#1552d0;--blue-soft:#e3ecfd;--navy:#0b1220;--sand:#fbf3e3;--mint:#e6f5ee;--rain:#e9f0fd;--bad:#b42318;--good:#1b7f4b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Figtree',system-ui,sans-serif;color:var(--ink);background:#f4f5f8;line-height:1.5;font-size:16px}
+.page{max-width:860px;margin:0 auto;background:#fff;padding:72px 80px 96px}
+.mono{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+h1{font-size:44px;letter-spacing:-.03em;line-height:1.05;margin:14px 0 10px}
+h2{font-size:26px;letter-spacing:-.02em;margin:56px 0 14px;padding-top:24px;border-top:1.5px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline}
+h2 small{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:500}
+h3{font-size:17px;margin:28px 0 8px;letter-spacing:-.01em}
+p{margin:0 0 12px;color:var(--ink)}
+.lead{font-size:19px;color:var(--muted)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600}
+.brand img{width:26px;height:26px}
+table{width:100%;border-collapse:collapse;margin:14px 0 8px;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);font-weight:500}
+.slide-tag{display:inline-block;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:var(--blue-soft);color:var(--blue);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.say{margin:10px 0 14px;padding:16px 20px;border-left:3px solid var(--blue);background:#f8faff;border-radius:0 12px 12px 0}
+.say b{display:block;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.note{font-size:14px;color:var(--muted);background:var(--sand);padding:12px 16px;border-radius:12px;margin:10px 0 16px}
+.line{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.line .who{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding-top:4px}
+.line.n .who{color:var(--faint)}.line.m .who{color:var(--blue)}.line.s .who{color:var(--bad)}.line.screen .who{color:var(--good)}
+.line.screen{background:var(--mint);border-radius:10px;padding:10px 12px;border-bottom:0;margin:6px 0}
+.line.screen .what{font-size:14px}
+.line em{color:var(--muted)}
+.tag{display:inline-block;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.tag.h{background:var(--mint);color:var(--good)}.tag.p{background:var(--rain);color:var(--blue)}
+ul{padding-left:20px;margin:6px 0 12px}li{margin:4px 0}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:14px}
+.box b{display:block;margin-bottom:6px}
+.check li{list-style:none;padding-left:26px;position:relative}.check li::before{content:"☐";position:absolute;left:0;color:var(--faint)}
+@media print{body{background:#fff}.page{padding:0;max-width:none}h2{break-before:auto;page-break-inside:avoid}.say,.line{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="brand"><img src="assets/grid-icon.svg" alt="">Grid</div>
+  <div class="mono" style="margin-top:28px">INF2573 · Team 6 · Midpoint pitch · Thursday, October 22 · Room SU 444</div>
+  <h1>Presentation script</h1>
+  <p class="lead">Ten minutes, six elements, one live demo. Roles: <b>Narrator</b> (drives the deck and sets each scene), <b>Madhura</b> (actor 1, has a job, uses Grid), <b>Suebin</b> (actor 2, still looking, frustrated). One more person takes notes during the critique.</p>
+
+  <div class="cols" style="margin-top:24px">
+    <div class="box"><b>Timing</b>
+      <table><tr><th>min</th><th>Beat</th><th>Deck</th></tr>
+      <tr><td>0:00</td><td>The product</td><td>Slides 1–2</td></tr>
+      <tr><td>1:00</td><td>The need</td><td>Slides 3–4</td></tr>
+      <tr><td>3:00</td><td>The value</td><td>Slide 5</td></tr>
+      <tr><td>4:00</td><td>Live demo (scene) · control map overlay</td><td>Slide 6 → Get started</td></tr>
+      <tr><td>7:00</td><td>Control map · AI wrong</td><td>Slides 7–8</td></tr>
+      <tr><td>7:45</td><td>How we measure</td><td>Slide 9</td></tr>
+      <tr><td>9:00</td><td>Risk · ask · next</td><td>Slides 10–11</td></tr>
+      <tr><td>9:45</td><td>Close</td><td>Slide 12</td></tr></table></div>
+    <div class="box"><b>Before we start</b>
+      <ul class="check">
+        <li>Double-click <code>Start deck.command</code> — starts Grid on <code>http://127.0.0.1:3100</code> and opens the deck at <code>http://127.0.0.1:3101/index.html</code>. Embedded websites and the live demo only work from that http address, not from the file.</li>
+        <li>Logged out in the dev browser; "Create account" ready for Suebin</li>
+        <li>Deck open: <code>index.html</code>, press <b>F</b>, press <b>T</b> on the first word</li>
+        <li>Who drives: Narrator on the deck, Madhura on the app</li>
+        <li>Note-taker named; critique log open</li>
+        <li>Rehearsed once under 10:00</li>
+      </ul></div>
+  </div>
+
+  <!-- ================= 1 ================= -->
+  <h2>1 · Product overview <small>~1 min · slides 1–3</small></h2>
+  <span class="slide-tag">Slide 1 · Title</span>
+  <div class="say"><b>Narrator</b>Grid helps a second-year grad student at their first career fair turn five forgettable hellos into real connections, and get better at it every time. You walk in with a goal, you remember what was said, you follow up, and your skills compound.</div>
+  <span class="slide-tag">Slide 2 · Real connections. Real skills.</span>
+  <div class="say"><b>Narrator</b>For a second-year grad student who meets five people at a career fair and is forgotten by all of them, Grid helps them walk in with a goal, remember what was said, follow up, and get better at it every time. That's the product. The features are in the demo.</div>
+  <span class="slide-tag">Slide 3 · You do the talking. Grid keeps the thread.</span>
+  <div class="say"><b>Narrator</b>Five beats. Two of them have AI in them, the prep brief and the debrief, and in both the AI proposes and you decide. Nothing is recorded during the chat. Nothing is sent for you. Everything you write feeds Grid Insights, Ask Grid, and your Skills. Nothing else does.</div>
+  <div class="note">Trap to avoid: don't list features. The screenshots do that. One sentence per slide, then move.</div>
+
+  <!-- ================= 2 ================= -->
+  <h2>2 · User need <small>~2 min · slides 4–5</small></h2>
+  <span class="slide-tag">Slide 4 · They want to be remembered.</span>
+  <div class="say"><b>Narrator</b>We ran two recorded interviews. Not enough yet, and we'll come back to that. But what we heard was consistent. The conversation itself is not the problem. <em>Read two quotes off the slide, slowly.</em> "I forget what they told me." "They're so messy because you're not focusing on the laptop." And the one that shaped the whole build: "I would never pull out an AI note taker during the conversation."</div>
+  <span class="slide-tag">Slide 5 · Seven branches. One we heard twice.</span>
+  <div class="say"><b>Narrator</b>Our opportunity tree has one rule: no quote, no branch. Branch C, "I leave with notes I can't use and details I lose," is the only one two people described unprompted. That is where Grid's debrief lives. Since Week 3 the need moved in two ways. Nobody mentioned getting better over time, so our original North Star, AI-awarded skill points, is gone. And both people dislike AI the other person can see, so Grid never records, never looks anyone up, never sends.</div>
+
+  <!-- ================= 3 ================= -->
+  <h2>3 · Value proposition <small>~1 min · slide 6</small></h2>
+  <span class="slide-tag">Slide 6 · Better than what?</span>
+  <div class="say"><b>Narrator</b>The current alternative is LinkedIn as an address book, a Notes app you never reopen, and asking ChatGPT for "good questions" that sound like everyone else's. Grid ties prep to one person and one goal, sorts your notes against what you wanted to learn, and refuses to score the people you met. AI earns its place in two moments: turning a goal and a person into questions in seconds, and turning a brain-dump into takeaways with the sentence they came from. Without a model key it still works, in labelled mock mode.</div>
+
+  <!-- ================= 4 ================= -->
+  <h2>4 · Live demo <small>~3 min · slides 7–9 · Get started</small></h2>
+  <span class="slide-tag">Slide 7 · Imagine…</span>
+  <div class="say"><b>Narrator</b>Imagine walking out of a career fair and actually remembering everyone. Two friends after class. Madhura has a job. Suebin is still looking. <em>Narrator steps back; Madhura and Suebin step forward.</em></div>
+
+  <h3>Scene 1 · After class (0:00–0:35)</h3>
+  <div class="line s"><span class="who">Suebin</span><span>I went to another networking thing last week. Talked to, like, five people. Everyone was nice, we swapped LinkedIns, and… that’s it. Nobody remembers me. I don’t even remember half of them. And now it’s messing with my job search.</span></div>
+  <div class="line m"><span class="who">Madhura</span><span>Yeah, I used to feel the exact same way. But have you heard of Grid?</span></div>
+  <div class="line s"><span class="who">Suebin</span><span>Grid? What’s that?</span></div>
+  <div class="line m"><span class="who">Madhura</span><span>It’s actually something I’ve been using to get better at networking. Here, let me show you.</span></div>
+  <div class="line n"><span class="who">Narrator</span><span><em>(presses <b>Get started</b> on the slide; Grid opens full-screen)</em></span></div>
+
+  <h3>Scene 2 · Onboarding (0:35–1:15) · Suebin drives, Madhura guides</h3>
+  <div class="line screen"><span class="who">Screen</span><span class="what">Landing → <b>Create an account</b> → any email → <b>Get started</b>. Welcome: name, stage, goals.</span></div>
+  <div class="line m"><span class="who">Madhura</span><span>So, let’s make you an account. First, Grid asks a little about you, like where you’re at in your career and what you’re hoping to work on.</span></div>
+  <div class="line s"><span class="who">Suebin</span><span>Okay, so I’m a grad student looking for a job, and I really want to get better at making connections. <em>(picks stage + goals)</em></span></div>
+  <div class="line m"><span class="who">Madhura</span><span>Perfect. The whole point is that everyone’s at a different stage, so Grid starts with what you actually want to achieve.</span></div>
+  <div class="line screen"><span class="who">Screen</span><span class="what">Skip resume → “You are all set” → <b>Get started</b>. Home opens with the walk-through card: <b>Your next action · 1 of 3</b>.</span></div>
+  <div class="line m"><span class="who">Madhura</span><span>Okay, now it’ll walk you through the app. It uses AI insights to tailor your experience, so the first step is adding a new person.</span></div>
+  <div class="line screen"><span class="who">Screen</span><span class="what">Step 1 · <b>Add a person</b> → Connect opens. Step 2 · spotlight on the name field. Step 3 · <b>Save person</b>.</span></div>
+  <div class="line m"><span class="who">Madhura</span><span>You should add Sam. He’s someone who helped me a lot when I first joined.</span></div>
+  <div class="line s"><span class="who">Suebin</span><span><em>(types)</em> Sam. <em>(Save person)</em></span></div>
+  <div class="line n"><span class="who">Narrator</span><span>Grid only knows what Suebin typed. No look-ups. <span class="tag h">human</span></span></div>
+  <div class="line screen"><span class="who">Screen</span><span class="what">Step 4 · card says <b>Plan a chat with Sam</b> → click. Step 5 · Sam is preselected. Step 6 · spotlight on the goal field and suggestion pills.</span></div>
+  <div class="line m"><span class="who">Madhura</span><span>Okay, now you can plan a chat with him. What’s your goal for this chat?</span></div>
+  <div class="line s"><span class="who">Suebin</span><span>Mmm… learn which skills are actually worth building. <em>(types it)</em></span></div>
+  <div class="line screen"><span class="who">Screen</span><span class="what">Step 7 · <b>Create my prep brief</b> → Prepare tab: goal, why this person, opener, questions. Step 8 · <b>Ask Grid for me</b> → Ask Grid answers from Suebin’s records. Tour fades: <b>Done</b>.</span></div>
+  <div class="line m"><span class="who">Madhura</span><span>Okay, awesome. Now Grid AI will help you prep for the chat. <em>(brief appears)</em> And you’re done!</span></div>
+  <div class="line n"><span class="who">Narrator</span><span>The AI proposed the questions. Every one is a checkbox Suebin can rewrite or delete. <span class="tag p">ai proposes</span> <span class="tag h">human decides</span></span></div>
+
+  <h3>Scene 3 · Skills (1:15–2:30) · Madhura’s account</h3>
+  <div class="line s"><span class="who">Suebin</span><span><em>(sits back)</em> Okay… it’s set up. But, sigh. Honestly? I’ve lost a lot of confidence in this whole thing.</span></div>
+  <div class="line m"><span class="who">Madhura</span><span>Don’t worry, I completely understand you. That’s exactly how I felt. But that’s why Grid is different from other apps: it actually focuses on building skills. Here, this is my account.</span></div>
+  <div class="line screen"><span class="who">Screen</span><span class="what">Log out → <b>Log in</b> with any email (seeded workspace: 85 Skills · Builder). Sidebar → <b>Learn</b>. Skills tab: total, tier, radar, “Strongest in practice. Most room to grow in follow-through.”</span></div>
+  <div class="line m"><span class="who">Madhura</span><span>If I go to Learn, it shows you which skills you’re excelling in and which need more work. Mine says I’m strongest in practice and I still need to work on follow-through. Which is fair.</span></div>
+  <div class="line screen"><span class="who">Screen</span><span class="what">Click the <b>Practice</b> tab: seven scenario cards (career fair, info session, asking for an intro, closing a chat…). Open one; show the first roleplay turn. Don’t play it through.</span></div>
+  <div class="line m"><span class="who">Madhura</span><span>And you can click the Practice tab, and it uses their AI to walk you through different situations: a career fair, an info session, how to end a conversation without feeling rude. The feedback is only on your own turns, never on the other person.</span></div>
+  <div class="line m"><span class="who">Madhura</span><span>This is better than using your own AI chat, because Grid already personalizes this conversation. It knows who you’re meeting, what your goal was, and what you need to improve.</span></div>
+  <div class="line n"><span class="who">Narrator</span><span>Skills are earned from what Madhura did: practice sessions, debriefs, follow-ups she actually sent. The model never awards them. <span class="tag h">human</span></span></div>
+  <div class="line s"><span class="who">Suebin</span><span>What? That’s awesome. Okay, I’m going to give this a try. Thanks!</span></div>
+  <div class="line n"><span class="who">Narrator</span><span><em>(Esc back to the deck)</em> That’s the whole vertical slice, running. Here’s the same path on the control map.</span></div>
+
+  <div class="note"><b>If running long:</b> cut Madhura's second Learn line and the scenario open in Practice. Non-negotiables: the onboarding goal step, the prep brief appearing, and the Skills radar.</div>
+
+  <!-- ================= control map ================= -->
+  <span class="slide-tag">Slide 8 · Control map</span>
+  <div class="say"><b>Narrator</b>Everything you just saw sits in two columns. The human decides: the goal, the edits, the send. The AI proposes: the brief, the takeaways, the drafts, and scores only when it can quote your notes. The third column is empty on purpose. Since Week 4 we drifted three times: calendar read dropped, AI-awarded skill percentages replaced with evidence-only scores, and Discover added, mutual connections only.</div>
+  <span class="slide-tag">Slide 9 · You see it. You fix it.</span>
+  <div class="say"><b>Narrator</b>When the AI is wrong, it's a checkbox you own. When it's unsure, it says "Not enough info" instead of a number. Every AI block is labelled. The framing question we expect: has the build pushed a hard judgment onto the human at the worst moment? The hardest judgment left is "does this sound like me?", and it lands three days before the fair, not in the conversation. Tell us if you disagree.</div>
+  <!-- ================= 5 ================= -->
+  <h2>5 · Success metrics <small>~1.5 min · slide 10</small></h2>
+  <span class="slide-tag">Slide 10 · North Star</span>
+  <div class="say"><b>Narrator</b>Our North Star is completed conversation loops: a chat that was prepared, debriefed, and followed up within seven days. It maps straight onto the need, lost notes and lost follow-ups. Sign-ups and page views don't count. Here are the honest numbers. Two interviews; the protocol asks for three or four. Zero C1 results; the sorted-notes-versus-summary test is wired but not run. Zero accessibility violations. Fifty-one tests, three of them stale. Not yet instrumented: prep created, debrief completed, follow-up sent. If fewer than a third of prepared chats get debriefed, people want the prep and not the notebook, and we're a question generator.</div>
+
+  <!-- ================= 6 ================= -->
+  <h2>6 · Risks and next steps <small>~1.5 min · slides 11–12</small></h2>
+  <span class="slide-tag">Slide 11 · Risk · ask · next</span>
+  <div class="say"><b>Narrator</b>Biggest risk: people over-trust the prep and walk in scripted. Smooth is harder to see than wrong. The seams, before you find them: the AI in this build is mock mode, Discover is seeded, Supabase and Stripe are untested, the rate limiter is per-process. Our ask: is "completed loops" the right North Star, or does it reward logging over relationships? Weeks 8 to 11, in order: run C1 with three people and two more interviews; evals with a real model; risk and governance, including the person who is in the system but never in the room; instrument the North Star. First commitment after Reading Week: C1, three people, results in the repo.</div>
+  <span class="slide-tag">Slide 12 · Build &amp; iteration</span>
+  <div class="say"><b>Narrator</b>How we got here: Mentra had AI-awarded scores and the Week 4 review flagged all three red items as places the AI decided. Sorted notes fixed that. Editable questions came from the interviews. Grid is the version where the human owns every decision.</div>
+  <span class="slide-tag">Slide 13 · Ready to get on Grid?</span>
+  <div class="say"><b>Narrator</b>Scan to open it. Log in with any email. Now tell us what you see.</div>
+
+  <!-- ================= discussion ================= -->
+  <h2>Discussion <small>10 min · note-taker logs verbatim</small></h2>
+  <div class="cols">
+    <div class="box"><b>Intent</b>A chat you prepared for, remember, and follow up on, with the human owning every decision.</div>
+    <div class="box"><b>Describe</b>Ask the room: where did you see the human? Where did the AI feel like it decided?</div>
+    <div class="box"><b>Question</b>Expected: is the need real with two interviews? Does "completed loops" measure relationships or logging? Who protects the contact who never consented?</div>
+    <div class="box"><b>Next</b>Say what we'll try. Don't defend. Triage after: act / park / reject, with a reason.</div>
+  </div>
+
+  <h2>Cheat sheet <small>one line each</small></h2>
+  <table>
+    <tr><th>Need</th><td>The chat goes fine; the notes, the memory and the follow-up leak.</td></tr>
+    <tr><th>Value</th><td>Prep tied to one person and one goal, notes sorted against what you wanted to learn, nothing recorded, nothing sent for you.</td></tr>
+    <tr><th>North Star</th><td>Completed conversation loops: prepared, debriefed, followed up within 7 days.</td></tr>
+    <tr><th>Biggest risk</th><td>Over-trusting the prep and walking in scripted.</td></tr>
+    <tr><th>Ask</th><td>Is "completed loops" the right North Star, or does it reward logging over relationships?</td></tr>
+    <tr><th>First commitment</th><td>Run C1 with three people; results in the repo.</td></tr>
+  </table>
+  <p class="mono" style="margin-top:40px">Grid · thegrid-ai.vercel.app · github.com/mydesignwebst-ship-it/INF2573-Team-6</p>
+</div>
+</body>
+</html>
